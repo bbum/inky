@@ -5,12 +5,13 @@ import PackageDescription
 
 let package = Package(
     name: "inky",
+    platforms: [
+        .macOS(.v10_15)
+    ],
     products: [
         .executable(name: "inky", targets: ["inky"])
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
         .package(url: "https://github.com/johnsundell/ink.git", from: "0.1.0"),
         .package(url: "https://github.com/apple/swift-package-manager.git", from: "0.1.0"),
     ],
